@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row" id="ro1" style="height:100vh;">
+            <style>
+                .gallery {
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr);
+                    grid-template-rows: repeat(4, 5vw);
+                    row-gap: 0rem;
+                    column-gap: 1rem;
+                }
+
+                .gallery__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    border-radius: 0px !important;
+
+                }
+
+                .gallery__item {
+                    position: relative;
+                    text-align: center;
+                    color: black;
+                }
+
+                .gallery__item--1 {
+
+                    grid-column: 1 / span 4;
+                    grid-row: 1 / span 4;
+                }
+
+                .gallery__item--2 {
+
+                    grid-column: 5 / span 2;
+                    grid-row: 1 / span 2;
+                }
+
+                .gallery__item--3 {
+                    grid-column: 7 / span 2;
+                    grid-row: 1 / span 2;
+                }
+
+                .gallery__item--4 {
+                    grid-column: 5 / span 2;
+                    grid-row: 3 / span 2;
+                }
+
+                .gallery__item--5 {
+
+                    grid-column: 7 / span 2;
+                    grid-row: 3 / span 2;
+                }
+
+                @media only screen and (max-width : 1024px) {
+
+                    #ro1 {
+                        height: 90% !important;
+                    }
+                }
+
+                @media only screen and (min-width : 1024px) and (max-width : 1440px) {
+
+                    #ro1 {
+                        height: 90% !important;
+                    }
+                }
+
+                @media only screen and (max-width : 630px) {
+
+                    .top-left {
+                        display: none;
+                    }
+                }
+            </style>
+            <!--gallery style-->
+
+            
+            <style>
+                .carousel-inner,
+                .carousel,
+                .carousel-item {
+                    height: 100%;
+                    min-height: 400px;
+                    width: 100%;
+                    background-position: center center;
+                    background-size: cover;
+                }
+
+
+                /*------------------------------ vertical bootstrap slider----------------------------*/
+
+                .carousel-inner>.carousel-item.carousel-item-next,
+                .carousel-inner>.carousel-item.active.carousel-item-right {
+                    transform: translate3d(0, 100%, 0);
+                    -webkit-transform: translate3d(0, 100%, 0);
+                    -ms-transform: translate3d(0, 100%, 0);
+                    -moz-transform: translate3d(0, 100%, 0);
+                    -o-transform: translate3d(0, 100%, 0);
+                    top: 0;
+
+                }
+
+                .carousel-inner>.carousel-item.carousel-item-prev,
+                .carousel-inner>.carousel-item.active.carousel-item-left {
+                    transform: translate3d(0, -100%, 0);
+                    -webkit-transform: translate3d(0, -100%, 0);
+                    -moz-transform: translate3d(0, -100%, 0);
+                    -ms-transform: translate3d(0, -100%, 0);
+                    -o-transform: translate3d(0, -100%, 0);
+                    top: 0;
+
+                }
+
+                .carousel-inner>.carousel-item.next.carousel-item-left,
+                .carousel-inner>.carousel-item.carousel-item-prev.carousel-item-right,
+                .carousel-inner>.carousel-item.active {
+                    transform: translate3d(0, 0, 0);
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -ms-transform: translate3d(0, 0, 0);
+                    -moz-transform: translate3d(0, 0, 0);
+                    -o-transform: translate3d(0, 0, 0);
+                    top: 0;
+                }
+            </style>
+            <div class="col-lg-4 col-xm-12">
+                <!-- <h2c cl>ARTICLES OF THE WEEK </h2> -->
+                <h4 class="hny-title mb-0 text-center mb-2 shop_with_us_title" style="font-size:1.5em;">ARTICLES OF
+                    <span>THE WEEK</span>
+                </h4>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- 
+                    <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+                    Indicators 
+                    -->
+
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" style="height:100%">
+                        <div class="carousel-item active">
+                            <div class="blog-grids">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/kumer.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Kumerica</a>
+                                    </h4>
+                                    The United States of Kumerica: cool creativity or ignoble imitation? Like
+                                    bushfire in harmattan, what started off as teenagers mimicking American
+                                    ‘gangster’ ... <br><a href="#" data-toggle="modal" data-target="#art1"
+                                        class="btn m-2 btn-sm" style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/blaa.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold"> Blazing the Trail for Black
+                                            Creators</a>
+                                    </h4>
+                                    World-renowned British-Ghanaian Architect, Sir David Adjaye OBE has received the
+                                    highest professional honour in the United Kingdom ...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art2" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/food.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Charle 101</a>
+                                    </h4>
+                                    If you have plans of visiting Hawaii, Spain or Japan, chances are high that you
+                                    would rehearse to polish ...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art3" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/fin.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">15 young African
+                                            entrepreneurs to watch.</a>
+                                    </h4>
+                                    Its without a shadow of doubt that young men and women entrepreneurs are really
+                                    taking on the economic sector by leaps and bounds...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art4" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/fela2.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Afrobeats and its influence
+                                            on the rest of the world.</a>
+                                    </h4>
+                                    Afrobeats as a genre of music was originally originated from Ghana. However, it
+                                    is mainly accredited to Nigerian...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art5" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/covid1.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Effects of COVID 19 on the
+                                            African Economy</a>
+                                    </h4>
+                                    What started as a minor infection in Wuhan, China in December 2019 has turned
+                                    into one of the most devastating viruses ever to hit the world. Having ...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art6" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/covidma1.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">The effects of COVID-19 on
+                                            Madagascar and the remedy.</a>
+                                    </h4>
+                                    The covid 19 infection in Madagascar is part of the global Covid 19 pandemic
+                                    infection that started in the latter part of 2019 in Wuhan China...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art7" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/covidma3.jpg" alt="" class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">2014 to today: has Gaddafi’s
+                                            death helped Libya?</a>
+                                    </h4>
+                                    On the 20th of October 2011, the world was stunned by the news that the dictator
+                                    of Libya has been killed...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art8" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/lote1.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center" style="font-size:1.2em;">
+                                        <a href="single.html" class="font-weight-bold">Nigeria is the only African
+                                            country barred from the upcoming American visa lottery.</a>
+                                    </h4>
+                                    The United States government has banished Nigerian residents from partaking in
+                                    the US Visa Lottery for 2022. This divulgence ...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art9" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/mari2.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center" style="font-size:1.2em;">
+                                        <a href="single.html" class="font-weight-bold">Rwanda has legalized the
+                                            growth and selling of Marijuana</a>
+                                    </h4>
+                                    President Paul Kagame chaired a Cabinet meeting in which he approved regulatory
+                                    guidelines on cultivation, processing and export of “high-value therapeutic
+                                    crops”...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art10" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+
+                        <div class="carousel-item">
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/wanda1.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Rwanda, one of the cleanest
+                                            nation on earth</a>
+                                    </h4>
+                                    Do you believe in miracles? Do you believe anyone can make a total turnaround
+                                    and change their lives forever? This is a story of a country...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art11" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/visit5.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Top ten (10) African
+                                            countries to visit after the lockdown.</a>
+                                    </h4>
+                                    The event of the spread of the coronavirus has led to the imposition of
+                                    lockdowns in most countries. This has brought ...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art12" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/sas1.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">Nigeria’s Struggle with
+                                            SARS</a>
+                                    </h4>
+                                    Do you know that over 1,100 people have been killed due to police brutality from
+                                    January to October 2020?...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art13" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+
+                            <div class="blog-grids mt-4">
+                                <div class="blog-grid-left">
+                                    <a href="single.html">
+                                        <img src="<?=PROOT?>assets/images/fin.jpg" alt=" " class="img-fluid" />
+                                    </a>
+                                </div>
+
+                                <div class="blog-grid-right text-justify">
+                                    <h4 class="text-center">
+                                        <a href="single.html" class="font-weight-bold">15 young African
+                                            entrepreneurs to watch.</a>
+                                    </h4>
+                                    Its without a shadow of doubt that young men and women entrepreneurs are really
+                                    taking on the economic sector by leaps and bounds...
+                                    <br> <a href="#" data-toggle="modal" data-target="#art4" class="btn m-2 btn-sm"
+                                        style="background:#e9640b;">Read More</a>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="art1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">The United States
+                                of Kumerica: cool creativity or ignoble imitation?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+
+                            Like bushfire in harmattan, what started off as teenagers mimicking American ‘gangster’
+                            lifestyle has gone viral; turning into a wild identity craze that has gained
+                            international recognition. The word Kumerica is an amalgamation of the two words, Kumasi
+                            and America. Kumasi, where the craze started, is the capital of the Ashanti Region of
+                            Ghana; a place noted for its rich tradition and status as the seat of Asantehene – ruler
+                            of the Ashanti Kingdom.
+                            <br>
+                            Essentially, Kumerica seeks to reflect the similarities that exist between Kumasi and
+                            urban American neighbourhoods. As a result, there are now towns in Kumasi with American
+                            names albeit unofficial. Abrepo is now Georgia, Atonsu is Mississipi, Krofrom is Ohio,
+                            Bantama is Florida and the statue of Komfo Anokye is now cultural equivalent of the
+                            Statue of Liberty in America.
+                            <br>
+                            Following the growing trend, a group of upcoming artistes have released hard-core
+                            hip-hop songs that have hurled them into Ghanaian music spotlight. These artistes
+                            combine various hip-hop influences, most notably, drill; a rap style that focuses on
+                            focuses on hustle, crime and the daily ordeals of life on the streets instead of
+                            metaphors and wordplay. Thanks to the power of social media, some of these artistes have
+                            gained international recognition. A project by O’kenneth and Reggie, Straight Outta
+                            Kumerica, an apparent reference to the (in)famous Straight Outta Compton album by N.W.A
+                            was recently recognized by Spotify. The popular streaming platform, Audiomack, also
+                            published a playlist ‘This Is Kumerica’ calling it a celebration of a bubbling Ghanaian
+                            music scene.
+                            <br>
+
+                            Another kumerica-inspired song, SORE, by Yaw Tog, Kenneth, City Boy, Reggie and JayBahd
+                            has gained popular acclaim drawing the attention of Vic Mensa, the prolific American
+                            rapper of Ghanaian heritage signed to Jay-Z’s label Roc Nation.
+                            <br>
+                            Nonetheless, Ghanaians are divided on the Kumerica craze. While a section of the
+                            population considers the movement a creative vehicle that conveys the life of young
+                            Ghanaians influenced by hip-hop, others complain that the occult imitation to American
+                            lifestyle is unpleasantly unoriginal.
+                            <br>
+                            What do you think? Kindly share your thoughts in the comment section below. <br>
+                            https://www.youtube.com/watch?v=AL_swhq5dzU<br>
+                            https://www.youtube.com/watch?v=u2N8Fi8z4oo<br>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Blazing the Trail
+                                for Black Creators</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+
+                            World-renowned British-Ghanaian Architect, Sir David Adjaye OBE has received the highest
+                            professional honour in the United Kingdom - the Gold Medal from the Royal Institute of
+                            British Architects. He is the first black recipient of the prestigious award and has
+                            therefore registered his hope that his achievement would "break the ceiling" for more
+                            black creators.
+                            <br>
+                            Sir Adjaye, who was knighted in 2017 by Queen Elizabeth II, is, without doubt, one of
+                            the most celebrated black designers today. He was recognized in the same year as one of
+                            the 100 most influential people by TIME Magazine as has been touted globally as one of
+                            the leading architects of this generation. <br>
+
+                            His firm, Adjaye Associates, which today operates globally, with studios in Accra,
+                            London, and New York is responsible for several monumental projects across the world.
+                            His largest project to date, The National Museum of African American History & Culture
+                            in Washington, DC opened on the National Mall in Washington DC in 2016 and was named
+                            Cultural Event of the Year by The New York Times. He also spearheaded the creation of
+                            Webster’s flagship store in Los Angeles, Moscow School of Management, SKOLKOVO, Russia
+                            as well as the Abrahamic Family House in Abu Dhabi UAE; a symbolic project of peaceful
+                            co-existence comprising a collection of three religious spaces: a mosque, a synagogue
+                            and a church. He is also the architect in charge of the controversial National Cathedral
+                            in Ghana. <br>
+
+                            Addressing the significance of his award in an interview with BBC's Focus on Africa
+                            radio show, Sir Adjaye explained that the award is important not just for him but for
+                            all black designers who often excluded from awards. <br>
+
+                            "I hope this allows more and more black designers to be celebrated," he added. <br>
+
+                            Check out some of the amazing projects of Adjaye Associates. <br><br>
+
+                            <img src="<?=PROOT?>assets/images/art2.jpg" alt="" class="img-fluid art-img">
+                            <img src="<?=PROOT?>assets/images/art2.1.jpg" alt="" class="img-fluid art-img">
+                            <img src="<?=PROOT?>assets/images/art2.2.jpg" alt="" class="img-fluid art-img">
+                            <img src="<?=PROOT?>assets/images/art2.3.jpg" alt="" class="img-fluid art-img">
+                            <img src="<?=PROOT?>assets/images/art2.4.jpg" alt="" class="img-fluid art-img">
+                            <img src="<?=PROOT?>assets/images/art2.5.jpg" alt="" class="img-fluid art-img">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Understanding
+                                Chale: The Popular Polysemic Word Ghanaians Use</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+
+                            If you have plans of visiting Hawaii, Spain or Japan, chances are high that you would
+                            rehearse to polish your Aloha, Gracias and Konnichiwa respectively. Of course, that's a
+                            situation natural to our human instinct to belong when we find ourselves in a new
+                            setting. Apart from breaking the ice and helping us to connect almost immediately,
+                            getting familiar with local slangs proves that one appreciates a culture and is making
+                            an effort to imbibe it. <br>
+
+                            If you find yourself in Ghana, the word Chale will come at you thick and fast. However,
+                            you may have to listen more closely and pay particular attention to the mannerisms of
+                            the speaker, as it can mean entirely different things in different situations. <br>
+
+                            Chale, we could have explained the many instances to you but here's an excellent
+                            introduction to the subject from the inimitable comic content creator @AdinkraDoralyn in
+                            a promo for Yobbings Cards. If there are other instances you know, do share with us.
+                            <br>
+
+                            https://twitter.com/adinkradoralyn/status/1305441974556790785?s=24 <br>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">15 young African
+                                entrepreneurs to watch.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+
+                            <p>
+                                Its without a shadow of doubt that young men and women entrepreneurs are really
+                                taking on the economic sector by leaps and bounds. From the financial services, real
+                                estate, ma nufacturing,media, tech and agriculture they’re taking risks more than
+                                ever, creating solutions to tackle problems and creating numerous jobs in the
+                                process.
+                                in no particular order meet the top 15 remarkable young entrepreneurs who are making
+                                giant waves in transforming the motherland. <br>
+                            <dl>
+                                <dt>Paul Kihiko, Kenyan (founder Wing it, Nairobi) </dt>
+                                <dd> 30-year-old Kihiko is the originator of Wing It Nairobi, Kenya's sole
+                                    wings-only eatery. Its first outlet at the Galleria Shopping Mall in Kenya​ has
+                                    been incredibly effective and is completing 6-figures yearly in income. A year
+                                    ago, Wing It raised $75,000 from two speculators for a minority stake in Kenya's
+                                    version of Dragons' Den. Kihiko is set to open different outlets this year.</dd>
+                                <dt>Abubakar Sadiq Mohammed Falalu, Nigerian (Founder, Falgates)</dt>
+                                <dd>Abubakar Sadiq Mohammed Falalu, 27, is the founder of Falgates, an organization
+                                    that f grows and plants rice. Falgates claims a rice processing office that has
+                                    a limit of 15 tons for each day and has a rice farm that utilizes more 180
+                                    individuals in Kaduna state in northern Nigeria. The organization had incomes of
+                                    $400,000 in 2017.</dd>
+
+                                <dt>Idris Sultan, Tanzanian (Founder, Sultan By Foremen)</dt>
+                                <dd>
+                                    25-year-old Tanzanian national Idris Sultan won the 2014 edition of Big Brother
+                                    Africa, walking away with the $300,000 cash prize. He has put that money to good
+                                    use. In 2017, he founded Sultan By Foremen, a footwear brand that has become
+                                    extremely popular amongst Tanzania’s hip, urban population. Sultan By Foremen
+                                    made more than $200,000 in revenues in 2017.
+                                </dd>
+                                <dt>Anerlisa Muigai, Kenyan (Founder, Nero)</dt>
+                                <dd>
+                                    Anerlisa Muigai, the daughter of the famous Kenyan liquor magnate Tabitha
+                                    Karanja, is producing her own way. Muigai, 30, is the organizer of Nero, a drink
+                                    organization that produces and sells the top selling Executive Still Water brand
+                                    across Kenya.
+                                </dd>
+                                <dt>Osvaldo Mokouma, 19, Republic of Congo</dt>
+                                <dd>
+                                    founder of AquagriTech, an undertaking that enhances metropolitan bio-waste to
+                                    manufacture food from fish that are placed in a shut circuit with plants that
+                                    absorb the droppings of fish for their development.
+                                </dd>
+                                <dt>Etop Ikpe, Nigerian Founder, Cars45</dt>
+                                <dd>
+                                    Etop Ikpe is the organizer of Cars45, Nigeria's first auto selling and vehicle
+                                    purchasing administration. In May a year ago, Cars45 raised a $5 million Series
+                                    A round from the Frontier Cars Group. Ikpe is a veteran business visionary with
+                                    involvement with transport, autos, versatile interchanges innovation, and
+                                    showcasing. Etop was already the Commercial Director of Konga, one of Nigeria's
+                                    biggest web based business stages, and previously the CEO and Co-MD of DealDey,
+                                    West Africa's response to Groupon.
+                                </dd>
+                                <dt>Jean Bosco Nzeyimana, Rwandan (Founder, Habona)</dt>
+                                <dd>
+                                    Jean Bosco is the Founder and CEO of Habona Limited, an organization that gives
+                                    coordinated waste administration benefits and further cycles the loss into
+                                    moderate and naturally amicable fills, for example, biogas and biomass
+                                    briquettes. The organization is likewise expanding into the establishment and
+                                    activity of clean force plants, going from waste to energy, for example, sun
+                                    oriented, biomass, hydro, and wind, just as atmosphere brilliant cultivating.
+                                </dd>
+                                <dt>Ricky Rapa Thompson, Ugandan (Founder, SafeBoda)</dt>
+                                <dd>
+                                    29-year-old Ugandan business person Ricky Rapa Thompson is a fellow benefactor
+                                    of SafeBoda, Uganda's 'Uber' for bike taxis. He has been instrumental to
+                                    developing Safeboda into a huge network of more than 1,000 riders who have come
+                                    to grasp innovation through the SafeBoda application.
+                                </dd>
+                                <dt>Mostafa Kandil, Mahmoud Nouh, Ahmed Sabbah, Egyptians ( Co-founder SWVL)</dt>
+                                <dd>
+                                    The Egyptians, who are all under the age of the 27, are the founders of Swvl, a
+                                    premium mass transit system that provide buses to every neighbourhood in Cairo.
+                                    It allows people to share a ride in a van or bus during morning and evening
+                                    commutes for a fixed flat fare with no surge pricing. Through an app, one can
+                                    book a ride at an affordable rate. Last year, Careem, a ride-hailing app based
+                                    in Dubai, invested $500,000 in Swvl in return for a minority stake. Swvl, which
+                                    was launched in March 2017, already has a team of more than 30 people and
+                                    completes 100,000 rides per month across Cairo and Alexandria.
+                                </dd>
+                                <dt>June Syowia, Kenyan( Founder Beiless group)</dt>
+                                <dd>
+                                    At just 22, Syowia runs Beiless Group, a fast-growing experiential and digital
+                                    marketing agency that has handled marketing campaigns for more than 50 popular
+                                    Kenyan brands over the last two months. Syowia is a recipient of the 2017 Global
+                                    Student Entrepreneur Award in Kenya.
+                                </dd>
+                                <dt>Ibrahima Ben Aziz Konate, Cote D’Ivoire (Founder Poultry D’or)</dt>
+                                <dd>
+                                    Ibrahima Ben Aziz Konate, 23, is the originator of Poultry d'Or, an organization
+                                    that produces and disseminates new poultry items and agro-nourishments. Their
+                                    items are butchered, cleaned, bundled and conveyed all in the very day. The
+                                    organization represents considerable authority in the creation and conveyance of
+                                    agri-food items and they plan to sell chicken at
+                                    serious costs legitimately to the customer. Konate was the 2017 victor of the
+                                    lofty Anzisha prize.
+                                </dd>
+                                <dt>Simbarashe Mhuriro, Zimbabwean (Founder, Oxygen Private Energy Limited)</dt>
+                                <dd>
+
+                                    Mhuriro, 32, is the organizer and Managing Director of Oxygen Energy Private
+                                    Limited, an independent power producer and sustainable power improvement
+                                    organization that works in utility-scale power plants and business housetop
+                                    ventures. In 2017, the African Development Bank (AfDB)- oversaw practical energy
+                                    store for Africa (SEFA) endorsed a US$ 965,000 award to Oxygen Energy Private
+                                    Limited to help the arrangement of a bankable business case for the advancement
+                                    of a 20MW off-framework sun based photovoltaic housetop venture on structures
+                                    possessed and oversaw by Old Mutual Property Group, Zimbabwe's biggest property
+                                    speculation directors. At the point when the task is finished, it will give
+                                    dependable and serious sunlight based capacity to many little and medium
+                                    estimated ventures all through Zimbabwe.
+                                </dd>
+                                <dt>Abdellah Mallek, Algerian (Founder Sylabs)</dt>
+                                <dd>
+                                    The 28-year-old Algerian business person is the founder of one of the principal
+                                    private startup accelerator in Algeria called Sylabs. Sylabs is a collaborating,
+                                    creation space and talent developer situated in downtown Algiers that blends
+                                    startup craftsmanship, innovation and enterprise to advance imagination and
+                                    ability improvement.
+                                </dd>
+                                <dt>Harold Okwa Nigerian, (Founder Jetseta)</dt>
+                                <dd>
+                                    Nigerian-conceived business person, Harold Okwa, 30, is the author of Vestates,
+                                    a luxury real estate organization situated in Abuja. He is additionally the
+                                    organizer of Jetseta, an organization that gives simple and moderate access to
+                                    private air travel and helicopter transport administrations through a versatile
+                                    application that consistently associates explorers to private flying suppliers
+                                    at alluring admissions around the world, in a hurry.
+                                </dd>
+                                <dt>Rahma Bajun, Tanzanian (Founder, MnM Clothing line)</dt>
+                                <dd>
+                                    Bajun, 29, is the organizer and Creative Director of MnM Clothing Line, a well
+                                    known Afro-driven attire brand in Tanzania that produces reasonable garments,
+                                    wallets and other design frill for people utilizing the mainstream East African
+                                    Kitenge texture. The organization has 7 full-time representatives and sells its
+                                    items across East Africa.
+                                </dd>
+                            </dl>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Afrobeats and its
+                                influence on the rest of the world.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            Afrobeats as a genre of music was originally originated from Ghana. However, it is
+                            mainly accredited to Nigerian music legend Fela Kuti. this is because in the late
+                            sixties he started making afrobeat music and took it to the world stage.
+                            <img src="<?=PROOT?>assets/images/fela.jpg" alt="fela kutti" class="img-fluid art-img">
+                            <br>
+                            <b>Yet, how did everything start?</b> Even though he had been making and playing music
+                            before at that point, Fela wasn't making music in the Afrobeat style and didn't coin the
+                            expression "Afrobeat" until after his fundamental outing to the U.S.A in 1969, during
+                            which he was acquainted with the works of activists like Martin Luther King and Malcolm
+                            X, which stirred his social and political awareness. Supported by his wide melodic
+                            presentation which incorporates Soul, Jazz, Funk, Highlife, and other African sorts,
+                            Fela chose to build up another melodic style and development that would mirror his
+                            melodic ability, advance the African culture and empower him to share his message of
+                            social equity, opportunity, and Pan-Africanism with the world.
+                            <br> The Afrobeat type, even though a combination of numerous different styles, is so
+                            remarkable and obvious that it keeps on establishing a connection with your brain long
+                            after you have tuned in to it. Artist and BBC DJ, Katrina Leskanich depicts it along
+                            these lines: "take the improvisational character of jazz, join it with the raunchiness
+                            of funk, flavor the blend with African convention and add a political message to it.
+                            What do you end up with? An Afrobeat record. <br>
+                            <br> The following are instruments that are needed to create an afrobeat music
+                            <ul style="list-style-type: disc; padding-left: 20px;">
+                                <li>Rhythm guitar(s) (plays funk strumming pattern)</li>
+                                <li>Tenor guitar (plays a finger-picked ostinato groove)</li>
+                                <li>Bass guitar</li>
+                                <li>Drum set</li>
+                                <li>Saxophone(s)</li>
+                                <li>Trumpet(s)</li>
+                                <li>Trombone(s)</li>
+                                <li>Organ/keyboards</li>
+                                <li>Rhythm conga #1</li>
+                                <li>Rhythm conga #2</li>
+                                <li>Solo (lead) conga</li>
+                                <li>Akuba: a set of 3 small stick-hit Yoruba congas (play flourishes/solos, and
+                                    ostinatos). “Sticks”/claves (plays ostinato)</li>
+                                <li>Sekere</li>
+                            </ul>
+
+                            To this day Fela Kuti’s afrobeats still exist and are still being played. Though current
+                            forms of it have added blends from other sounds. His sons Seun and Femi Kuti still carry
+                            out his message and legacy. <br><br>
+                            <b>The influence of Afrobeats on today's world and music is simply immense and
+                                unimaginable.</b><br>
+                            Beyond Fela’s reign, Afro-beats has had its influence around the world. It has attracted
+                            several legendary jazz musicians such as Roy Ayers in 1970 and Randy Weston in 1990. It
+                            has resulted in albums such as Africa: the center of the world by Roy Ayers. <br>
+                            Branford Marsalis in 1994, an American saxophonist included 
+                            Fela’s “Beast of no nations” in his Buckshot LeFonque album. 
+                            In 2009 the music label Knitting Factory Records (KFR) created the Broadway musical
+                            FELA! As said on the melodic's site, the story displayed Fela Kuti's "fortitude and
+                            mind-boggling melodic dominance" alongside the story of his life. The show had 11 Tony
+                            nominations, getting three for Best Costumes, Best Sound, and Best Choreography. FELA!
+                            Was on Broadway for a very long time and was delivered by notables, for example, Shawn
+                            "Jay-Z" Carter and Will and Jada Pinkett-Smith. Numerous famous people were noted on
+                            going to the shows, for example, Denzel Washington, Madonna, Sting, Spike Lee (who saw
+                            it multiple times), Kofi Annan, and even Michelle Obama. Michelle Williams, the previous
+                            vocalist of young lady bunch Destiny's Child, was given a role as the function of Sandra
+                            Isadore. <br> <br>
+                            Famous musicians like Jay-Z, Drake, J. Cole, Paul Simon, Nas, Missy Elliot, Brian Eno,
+                            David Byrne, and Peter Gabriel have all utilized obvious Afrobeat components in their
+                            music, as have more present-day groups, for example, Vampire Weekend. Fela Kuti himself
+                            may be the most name-dropped non-rapper in hip-hop history, and his melodies keep on
+                            being inspected by makers, MCs, and DJs. Outstanding figures like The Roots and Lupe
+                            Fiasco have composed entire melodies about him, and still, others refer to him as an
+                            impact. Afro-beats have indeed influenced today's music. <br>
+                            <img src="<?=PROOT?>assets/images/fela2.jpg" alt="fela kutti" class="img-fluid art-img">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Effects of COVID
+                                19 on the African Economy</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            What started as a minor infection in Wuhan, China in December 2019 has turned into one
+                            of the most devastating viruses ever to hit the world. Having killed over 36 million
+                            people around the world, it was declared a pandemic on 11th March 2020. Despite the
+                            havoc it has wrecked on the global frontier, COVID 19 has seemed to have fewer effects
+                            in Africa as a whole. The percentage of lives lost to this virus in Africa is one of the
+                            least around the globe, despite being one of the least affected continents, Africa has
+                            had its share of the COVID 19 menace. Several aspects of the African economy have been
+                            completely shut down. <br>
+                            <figure>
+                                <img src="<?=PROOT?>assets/images/covid1.jpg" alt="" class="img-fluid" />
+                                <figcaption> (Photo by <a
+                                        href="https://unsplash.com/@martinsanchez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Martin
+                                        Sanchez</a> on <a
+                                        href="https://unsplash.com/s/photos/corona-virus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    )</figcaption>
+                            </figure>
+
+                            The harsh effects of this virus on the African economy stems from the fact there is
+                            <strong>Inadequate number of testing kits and isolations centers</strong>, there's no
+                            denying the fact that most African countries lack the appropriate testing kits and
+                            proper isolation centers for detection and prevention of the virus. This has majorly
+                            increased the rate of infection and death among the African countries. This has resulted
+                            in immense negative impacts on the ever-vibrant continent. <br><br><br>
+                            <h4>Tourism in Africa</h4>
+                            <figure>
+                                <img src="<?=PROOT?>assets/images/covid2.jpg" alt="" class="img-fluid" />
+                                <figcaption> (Photo by <a
+                                        href="https://unsplash.com/@martinbekerman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Martin
+                                        Bekerman</a> on <a
+                                        href="https://unsplash.com/s/photos/africa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    )</figcaption>
+                            </figure>
+                            First and foremost, and perhaps the harshest hit part of the economies in the African
+                            continent is the shutdown of the tourism sector. Since the virus is transferred through
+                            human contact, during the peak of the virus every country closed its border to
+                            foreigners, and hence movement from one country to another was cut off. This resulted in
+                            the shutting down of the tourist attractions and the tourism sector. In Ghana and
+                            Nigeria, tourism contributes roughly to about 40 percent of the countries revenue per
+                            year. So all the revenue the countries could have accrued from tourism in 2020 has been
+                            cut half or even completely lost, this thereby decreases the country's total revenue
+                            income at the end of the year and thereby reduces the per capita income at the end of
+                            the year. <br><br>
+                            <br>
+                            <h4>Unemployment</h4><br>
+                            The COVID 19 has reared the ugly head of the canker in every nation's economy,
+                            Unemployment. By the first three months of the year, 30% of the South African country
+                            became unemployed. That amounts to 7 million people. Unemployment brings about the
+                            situation whereby active people who are ready and willing to work are denied jobs. This
+                            happens mostly because companies can no longer afford to
+                            <figure>
+                                <img src="<?=PROOT?>assets/images/covid3.jpg" alt="" class="img-fluid" />
+                                <figcaption>(property of bind images)</figcaption>
+                            </figure>
+                            pay the wages of these workers. This has become profoundly serious to the extent that
+                            Pandemic unemployment assistance aids and several unemployment aids have been set up to
+                            reduce the effects of the virus. Due to unemployment, able-bodied people can no longer
+                            work to bring in revenue and pay taxes that can generate income. That could be used to
+                            engage in economic activities that will boost the economy. <br>
+                            Unemployment as an effect of the coronavirus has not only affected the economy in Africa
+                            but has increased the surge of crime. This is because people have no work to do to
+                            maintain themselves, so they resort to crime as a means of survival.
+                            <br><br><br>
+                            <h5>Shocks in supply and demand cycles</h5><br>
+                            <img src="<?=PROOT?>assets/images/covid4.jpg" alt="" class="img-fluid" />
+                            <br>
+                            In 2019, Africa’s GDP increase at 3.6% was ‘even’ inadequate to speed up financial and
+                            social growth and decrease poverty. Growth per capita used to be around 0.7% and job
+                            introduction had no longer saved pace with the want to furnish possibilities to the 29
+                            million younger human beings coming into working age every year. Since 2000, <b>Africa’s
+                                GDP boom has mostly been pushed by using home demand (69% of the total)</b>.
+                            Africa’s labor productiveness as a share of the US stage stagnated between 2000 and
+                            2018, and the Africa-to-Asia labor productiveness ratio has diminished from 67% in 2000
+                            to 50% nowadays (AUC/OECD, 2019[3]). Global markets account for 88% of Africa’s exports,
+                            ordinarily in oil, mineral assets, and agricultural commodities. <br>
+                             At the onset of the COVID 19 crisis, potentialities differed throughout economies. Some
+                            have been exhibiting excessive growth-rates, in extra of 7.5% (Rwanda, Côte d’Ivoire,
+                            and Ethiopia), however, Africa’s biggest economies had slowed down. In Nigeria (GDP boom
+                            of 2.3%), the non-oil area has been sluggish, in Angola (-0.3%) the oil area remained
+                            weak, whilst in South Africa (0.9%) low funding sentiment weighed on financial activity.
+                            Due to the shocking surge in demand followed by a deep sink or up-rise in supply has
+                            affected the economy because there is no way of predicting a surge or downfall of a good
+                            or product. Thereby companies may provide a high supply of a good or service and end up
+                            running at loss due to shock changes in the demand and supply cycles. <br>
+                            <br>
+                            <br>
+                            <h4>Trade</h4><br>
+                            As if the issue of shocks in the supply and demand cycle is not enough, just as
+                            painfully expected COVID 19 has hit trade in African economies extremely hard. The first
+                            five months of the virus’s hit were recorded as one of the worst trade periods for
+                            Africa because they relied on export commodities whose prices have crashed badly on the
+                            world stage. <br>
+                            According to the World Bank report, because of the pandemic, economic growth in
+                            sub-Saharan Africa has decreased by 2.4% in 2019 to between -2.1% and -5.1% in 2020.
+                            This is the first time this region has experienced such a recession in 25 years. This
+                            will inevitably affect Africa’s participation in trade and value chains as well as
+                            reduce foreign financing flows. This just but a few impacts of COVID 19 on the African
+                            economy. <br><br><br>
+                            <h4>Conclusion</h4><br>
+                            In conclusion, the harsh impacts of COVID 19 have negatively affected the African
+                            economy and some steps are been taken to hopefully recover from the impacts and prepare
+                            in case of any other surprise occurrence. Firstly,
+                            <b>Governments of the most countries in Africa have decided to diversify the
+                                economy:</b>
+                            the virus has shown the overdependence of the countries on traditional economic ventures
+                            such as tourism, trade, and production of primary products, and now other ventures are
+                            being looked into to diversify the economies of these countries. <br>
+                            Also, <b>Africa will need more favorable international trade agreements to support its
+                                growing but still fragile export sector.</b>br
+                            Just as Martin Luther King said, “If you can't fly then run if you can't run then walk
+                            if you can't walk then crawl, but whatever you do you have to keep moving forward.” With
+                            new visions and ideas assisted with faith, Africa can hopefully recover from the effects
+                            of this destructive virus and bring back the dying economies to life. <br>
+                            <figure>
+                                <img src="<?=PROOT?>assets/images/covid5.jpg" alt="" class="img-fluid" />
+                                <figcaption> (Photo by <a
+                                        href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie
+                                        Spratt</a> on <a
+                                        href="https://unsplash.com/s/photos/africa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    )</figcaption>
+                            </figure>
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">The effects of
+                                COVID-19 on Madagascar and the remedy.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            The covid 19 infection in Madagascar is part of the global Covid 19 pandemic infection
+                            that started in the latter part of 2019 in Wuhan China.
+                            <img src="<?=PROOT?>assets/images/covidma1.jpg" alt="Covid-19"
+                                class="img-fluid art-img">
+                            <br><br>
+                            <br>
+                            The Covid 19 also known as the coronavirus was first confirmed in china and since then
+                            it has spread across all countries on the planet. <b>The first three cases were
+                                confirmed in march 2020 in Madagascar and all the patients were women.</b><br><br>
+                            By April 2020, 121 cases were discovered but yet no death cases. There were 71 new
+                            people infected. The infection rate however decreased by 37% as compared to March.
+                            <br><br>
+                            On May 16th, 2020, Madagascar confirmed its first death case associated with the covid
+                            19. It was a 54-year-old medical worker who suffered from diabetes and high blood
+                            pressure. As of June 2020, the European center for disease prevention and control had
+                            confirmed 6 more covid 19 related deaths. <br><br>
+                            By July 2020 cases saw a drastic surge as cases surged to up to 8654 new cases and the
+                            death toll increased to 106. This called for an emergency nation-wide lockdown. <br><br>
+                            By September 2020 there were 1,514 fresh cases, bringing the absolute number of affirmed
+                            cases to 16,377. The loss of life rose to 229. The quantity of recouped patients
+                            expanded to 15,139, leaving 1,009 active cases toward the finish of the month. <br><br>
+                            <h4>The Remedy</h4><br>
+                            <figure>
+                                <img src="<?=PROOT?>assets/images/covidma2.jpg" alt="" class="img-fluid art-img" />
+                                <figcaption> (Photo by <a
+                                        href="https://unsplash.com/@antonisocias?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ANTONI
+                                        SOCIAS</a> on <a
+                                        href="https://unsplash.com/@antonisocias?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                                    )</figcaption>
+                            </figure>
+                            Lockdowns were enforced in two cities. The legislature declared on 17 March that all
+                            worldwide and territorial flights would be suspended for 30 days beginning 20 March.
+                            <br><br>
+
+                            Because of the emergency, absence of global tourists messed up the travel industry.
+                            Ambatovy mine suspended activities. The Central Bank of Madagascar infused many billions
+                            of ariary into the financial framework to facilitate the monetary harm brought about by
+                            COVID-19. <br><br>
+
+                            On 20 April 2020, Madagascar President Andry Rajoelina authoritatively dispatched a
+                            Covid "cure" named "Coronavirus Organic". Created by the Madagascar Institute of Applied
+                            Research (MIAR), the natural tea was made utilizing artemisia and other privately
+                            sourced spices. Military personnel was dispatched to distribute batches of "Coronavirus
+                            Organic", with Colonel Willy Ratovondrainy declaring on state TV that the tea would
+                            "reinforce immunity".[27] However, the National Academy of Medicine of Madagascar
+                            (ANAMEM) voiced its wariness, while the World Health Organization (WHO) forewarned that
+                            there was no confirmation for any Covid fix at the hour of Covid-Organic's dispatch. The
+                            African Union has gone into conversations with the Malagasy government to test the
+                            medication's security and productivity. Although the ‘cure’ has not proved to be
+                            effective, it’s a step towards remedy and the lockdown is helping to slow down the rate
+                            of infection.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">2014 to today:
+                                has Gaddafi’s death helped Libya?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            On the 20th of October 2011, the world was stunned by the news that the dictator of
+                            Libya has been killed. Muammar Gaddafi and his cohorts were caught hiding in drainage
+                            pipes after fleeing from attack. It was an end to a horrific reign of terror, but one
+                            may ask was that the end Gaddafi deserved? <br>
+
+                            <img src="<?=PROOT?>assets/images/covidma3.jpg" alt="Gaddafi"
+                                class="img-fluid art-img" /><br><br>
+
+
+                            He had led an autocratic Libya for 42 years and squashed any other political power while
+                            maintaining total dictatorship over the country and He allegedly funded international
+                            terrorism. Gaddafi was also known for killing many people he deemed were his enemies and
+                            labeling his own people “rats” and executing them and injuring a thousand others in the
+                            process. <br><br>
+                            Yet there are two simple questions to ask: <b>Has Gaddafi’s death made Libya better? Is
+                                Libya happy now?</b><br><br>
+                            To answer these questions we need to go back exactly ten (10) years back to Libya during
+                            the peak of Gaddafi’s rule and compare it with present day Libya. <br><br><br>
+                            <b>Gaddafi carried out the world’s largest irrigation project</b><br><br>
+                            By now you would have already known of how hot and dry some parts of Africa is,
+                            especially the parts that have Desert. Farming in those parts was a problem and a
+                            headache and access to potable water were much of an imagination. The Gaddafi system
+                            left on one of present-day man's structures of improvement: the Great Man-Made River
+                            Project to make water accessible to the entire nation. As is known, Libya is in a desert
+                            area and Gaddafi's arrangement to enable each resident of access was the Great Man-Made
+                            River Project. <br><br><br>
+                            <b>Education and Healthcare was free and accessible</b><br><br>
+                            Under Gaddafi, education and medical services were free for all. A reaction to this case
+                            by Masareef Edareeya, a Libyan resident asserted the nature of education and wellbeing
+                            was horrifying yet that does nothing to the way that it was free. No framework is
+                            wonderful except for most are flawed and still costly. Gaddafi ensured his framework was
+                            financed and even Mercy Corps verified the reality in its Beyond Gaddafi: Libya's
+                            Governance Context. That is more than the supposed pioneers" can say for their nations.
+                            <br><br><br>
+                            <b>Newlyweds received $50,000 from the government</b><br><br>
+                            Gaddafi's legislature had a law accommodating a monetary award to newly-weds to purchase
+                            their first apartment to help start a family. Cases are that the process was repetitive
+                            and regulatory to the degree that relatively few individuals tried to finish it yet the
+                            $50,000 was there if one finished. Again Mercy Corps affirmed Gaddafi gave lodging to
+                            newly-weds. Reprimanding the award on grounds of repetitive cycles is an ill-motioned
+                            attack at assaulting what Gaddafi represented. <br><br><br>
+                            Libya had no external debt and had reserves of $150 billion most of which were frozen
+                            globally <br><br>
+                            Libya was indeed a booming economic center under the rule of Gaddafi.to put this in the
+                            appropriate perspective, the self-acclaimed capital of democracy and capitalism had a
+                            debt of 18 trillion USD, Libya had NONE. This goes to prove beyond any iota of doubt
+                            that Gaddafi even though portrayed to be a murderer and dictator, had a love for his own
+                            country and did all he could to keep them out of debt. <br><br>
+                            With these strong and irrefutable points, let's see what is the situation of current-day
+                            Libya. <br><br><br>
+                            <h5>Libya is in Chaos</h5><br>
+                            <img src="<?=PROOT?>assets/images/covidma4.jpg" alt="Gaddafi"
+                                class="img-fluid art-img" /><br><br>
+                            Today’s day Libya is simply sorrowful. Multiple tribes who were once united under the
+                            “Dictator” now struggle for power and influence and authority over the nations already
+                            dwindling-oil. Three different parties are in a perpetual power struggle. ISIS has taken
+                            control of Sirte- Gaddafi’s hometown. <br><br>
+                            When he was in power, Gaddafi did his best to give monumental facelifts to some cities
+                            in the country and when he fell from power, ISIS saw the time as a ripe opportunity to
+                            exploit the towns and expand their barbaric empire. It’s noteworthy that al-Qaeda tried
+                            to do the same thing while Gaddafi was in control but could not succeed. <br><br><br>
+                            <h5>Libya’s Black Gold</h5>
+                            <img src="<?=PROOT?>assets/images/covidma5.jpg" alt="Gaddafi"
+                                class="img-fluid art-img" /><br><br>
+                            Libya's definitive salvation lies in its oil. This could finance the revamping of the
+                            nation and spread the riches sufficiently wide with the goal that enough contending
+                            groups can meet up to force a harmony. Lately, oil yield has multiplied from 250,000
+                            barrels for every day to 500,000 thousand far shy of the Gaddafi-time creation levels of
+                            more than 1 million barrels. <br>
+                            The boost in oil sales came off the back of military action by the defense chief of the
+                            former internationally recognized government, General Khalifa Haftar. He assumed
+                            responsibility for key oil offices in the east. Toward the West's amazement, Libya's
+                            National Oil Corporation boss positioned in Tripoli permitted Haftar and his partners to
+                            sell the oil. The move makes a joke of the UN-sponsored GNA's capacity to lead the
+                            nation, put it under their influence and own the oil. Haftar had wouldn't back the GNA
+                            and in this improvement has outsmarted them and set further question marks against their
+                            authenticity. The action by the GNA to give control of the nation's oil back into the
+                            hands of these people just proves how hopeless it will be to think Libya’s oil might
+                            save them someday. <br><br>
+                            <h5>Power Struggle</h5>
+
+                            If there is one thing that divides Africa apart more than anything it’s the mad hunger
+                            for power by some of its citizens. This has woefully become the case in Libya. As a
+                            result of the fall of Muammar Gaddafi, several groups have been in a perpetual struggle
+                            for rule over the once peaceful country. Three political powers, hundreds of groups, and
+                            multiple tribes are still in a struggle for control. This has resulted in tribal wars
+                            that led to the loss of life and destruction. <br><br><br>
+
+                            Recently in March, The UN hastened to form GNA (General National Congress). A government
+                            that would see to it that peace is restored in the country and the struggling factions
+                            are brought together. But since its formation and since its leadership arrived by boat
+                            in Tripoli, it has since struggled to be relevant and has brought no change in the
+                            current state of things. <br><br>
+                            The two questions asked at the beginning of the article can then only be answered by the
+                            reader. <b>Has Gaddafi’s death made Libya later?</b><br><br>
+                            <b>Is Libya Happy now?</b>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Nigeria is the
+                                only African country barred from the upcoming American visa lottery.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            The United States government has banished Nigerian residents from partaking in the US
+                            Visa Lottery for 2022. This divulgence is contained in a report, 'Directions for the
+                            2022 diversity immigrant visa program (dv-2022)' got from the US Department of States
+                            site on Thursday, October 15, 2020. <br><br>
+                            <img src="<?=PROOT?>assets/images/lote1.jpg" alt="Nigeria american visa lottery"
+                                class="img-fluid"> <br>
+                            The archive expresses that Nigerian residents are the main Africans that are not
+                            qualified to partake in the current year's Diversity Visa program. This is on the
+                            grounds that over 50,000 locals of the nation moved to the United States in the previous
+                            5 years. <br><br>
+                            Different nations who fall into this class and are banished from participating they are
+                            Bangladesh, Brazil, Canada, China (counting Hong Kong SAR), Colombia, Dominican
+                            Republic, El Salvador, Guatemala, Haiti, Honduras, India, Jamaica, Mexico, Pakistan,
+                            Philippines, South Korea, United Kingdom (with the exception of Northern Ireland) and
+                            its reliant regions, and Vietnam. <br><br>
+                            Part of the announcement from the archive peruses, "For DV-2022, people conceived in the
+                            accompanying nations are not qualified to apply, in light of the fact that more than,
+                            50,000 locals of these nations moved to the United States in the past five years:
+                            Bangladesh, Brazil, Canada, China (counting Hong Kong SAR), Colombia, Dominican
+                            Republic, El Salvador, Guatemala, Haiti, Honduras, India, Jamaica, Mexico, Nigeria,
+                            Pakistan, Philippines, South Korea, United Kingdom (aside from Northern Ireland) and its
+                            needy domains, and Vietnam. People conceived in Macau SAR and Taiwan are qualified."
+                            <br><br>
+                            Despite the fact that locals of other African nations are permitted to apply, the
+                            archive clarified that "people conceived in the territories prior to June 1967 by
+                            Israel, Jordan, Syria, and Egypt are chargeable, separately, to Israel, Jordan, Syria,
+                            and Egypt." <br><br>
+
+                            "People conceived in the Gaza Strip are chargeable to Egypt; people conceived in the
+                            West Bank are chargeable to Jordan; people conceived in the Golan Heights are chargeable
+                            to Syria." <br><br>
+
+                            It expresses that candidates who are chosen in the program must meet basic yet severe
+                            qualification necessities to fit the bill for a variety visa. <br><br>
+                            It additionally expresses that the Department of State decides selectees through a
+                            randomized PC drawing and appropriates variety visas among six geographic districts. It
+                            takes note of that no single nation may get over 7% of the accessible DVs in any one
+                            year." <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Rwanda has
+                                legalized the growth and selling of Marijuana</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            <img src="<?=PROOT?>assets/images/mari1.jpg" alt="" class="img-fluid art-img"> <br>
+                            - President Paul Kagame chaired a Cabinet meeting in which he approved regulatory
+                            guidelines on cultivation, processing and export of “high-value therapeutic crops” -
+                            While the country approved cannabis cultivation, use of the same for medicinal or
+                            recreational purposes is still prohibited - Rwanda aims at boosting its export revenue
+                            by tapping into the fast growing global cannabis market. <br><br>
+                            <br>
+
+                            According to The New Times Rwanda, Paul Kagame's government aims at boosting its export
+                            revenue by tapping into the fast growing global cannabis market which is currently
+                            valued at $345 billion. <br>
+                            <img src="<?=PROOT?>assets/images/mari2.jpg" alt="" class="img-fluid art-img"> <br>
+                            <br> Speaking to The New Times, Aloysie Manishimwe, a researcher in medicinal plants,
+                            welcomed the government’s decision to enter the multi-billion dollar industry. <br><br>
+                            “I don’t think it’s a bad move since it comes to serve healthcare needs. Already there
+                            are many countries that have used cannabis for medicinal purposes,” she said. <br><br>
+                            Manishimwe, however, reminded authorities not to throw caution to the wind. <br><br>
+                            “Already drug abuse, specifically cannabis is rampant among young people in Rwanda. The
+                            task will be upon the government to have strong law enforcement,” she added. <br><br>
+                            Rwanda joins the likes of other African countries including South Africa, Malawi,
+                            Lesotho and Zambia to legalize the production and export of cannabis for medical
+                            purposes. <br><br>
+                            “The government of Rwanda expects the sector to generate significant export revenues and
+                            employment opportunities in high-value agriculture and agro-processing,” RDB said.
+                            <br><br><br>
+
+
+                            <h5>The process to approve cannabis farming in Rwanda started in 2019</h5>
+                            According to sources from the country, the Rwanda Development Board (RDB) had invited
+                            several companies to bid for the development of medical cannabis in the country in 2019
+                            with a focus on the export market only. <b>It should be noted production or sale of
+                                cannabis is prohibited in Rwanda and doctors are banned from prescribing it as
+                                medicine. Anyone found guilty of the aforementioned could face two years jail term
+                                and a fine of about KSh 300,000 under Article 266 of the country's Penal Code.</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Rwanda, one of
+                                the cleanest nation on earth</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            Do you believe in miracles? Do you believe anyone can make a total turnaround and change
+                            their lives forever? This is a story of a country once upon a time noted to be the most
+                            polluted country ever to the cleanest country in the whole of Africa. <br>
+                            <img src="<?=PROOT?>assets/images/wanda1.jpg" alt="" class="img-fluid art-img">
+                            <br><br><br>
+
+                            <h5><b>The ban on plastic bags</b></h5>
+                            You may ask how Rwanda made such a great turnaround. <br>
+                            It's simple, in 2008 the Rwandan ministry of environment commissioned research into how
+                            plastic bags were a threat to the environment, polluted waters and killed aquatic life,
+                            and polluted the society as a whole. According to the United Nations environment
+                            program, after several months of study and research, a huge step was taken and there was
+                            a ban on the use of single plastic bags. This was then replaced with other safer sources
+                            such as the banana leaf, cloth, paper, and papyrus. <br>
+                            <img src="<?=PROOT?>assets/images/wanda2.jpg" alt="" class="img-fluid art-img"> <br><br>
+                            <br>
+                            <h5><b>Increase in afforestation</b></h5>
+                            Rome was not built overnight either was the cleanliness of Rwanda achieved overnight,
+                            because of its ambitious goal to increase forest cover by 30% by 2020 per the World
+                            economic forum. Due to this, the nation has undertaken a massive tree-planting program
+                            and reforestation. Additionally, new measures such as agroforestry and ‘training schemes
+                            in forest management were put in place together with the ban on plastic this measure has
+                            helped improve upon the rise in clean cities across Rwanda. <br>
+                            <img src="<?=PROOT?>assets/images/wanda3.jpg" alt="" class="img-fluid art-img"> <br><br>
+
+                            <br>
+                            <h5><b>The goal of attaining the cleanest capital in Africa</b></h5>
+                            <img src="<?=PROOT?>assets/images/wanda4.jpg" alt="" class="img-fluid art-img">
+                            <br><br><br>
+                            You never know what proper and effective planning can reap until you read about how the
+                            dream to be the cleanest capital city in Africa helped Rwanda become one of the cleanest
+                            countries in Africa. <br><br>
+                            do you know littering in Rwanda could get you jailed? or may even make you face hefty
+                            fines? now you know, the nation of Rwanda takes this very seriously. According to the
+                            New York Times, this has paid off beautifully. Thanks majorly to the absence of plastic
+                            waste, the UN habitat declared Kigali as one of the cleanest capitals in Africa in 2008.
+                            Rwanda has gone ahead to use innovations and investments of promote this effort, so as
+                            reach its full goal. <br><br><br>
+
+                            <h5><b>New opportunities</b></h5>
+                            As a cliché goes, every dark cloud has a silver lining. As Rwanda placed a ban on the
+                            use of single-use plastic products, it created avenues of employment for investors who
+                            were looking for new and alternative goods to plastic. They created other biodegradable
+                            goods. The best part is they recycled the plastic waste into other useful items. So they
+                            did not simply stop the creation of new plastic waste but were also using the already
+                            existing ones in creating useful items. <br>
+                            <img src="<?=PROOT?>assets/images/wanda5.jpg" alt="" class="img-fluid art-img">
+                            <br><br><br>
+
+                            <h5><b>Umuganda</b></h5>
+                            Umuganda is a local Kinyarwanda that means “coming together for a mutual purpose”. In
+                            this spirit, there is a monthly cleanup exercise organized on the last Saturday of every
+                            month to tidy up the society. Umuganda in itself is not a volunteer program as described
+                            its rather a fun project in which people come together at the end of every month to tidy
+                            up their surroundings, but notice this police monitor the activity and can stop any
+                            Rwandan at any time and force them to clean up the environment right on the spot. There
+                            are hefty penalties for any Rwandan who does not take part in the activity. This is 5000
+                            francs that is almost 9.06 dollars. This might not seem much but note that the average
+                            Rwandan earns roughly 150 dollars monthly. <br>
+                            <img src="<?=PROOT?>assets/images/wanda6.jpg" alt="" class="img-fluid art-img"> <br><br>
+
+                            <br>
+                            <h5><b>Biological system restoration</b></h5>
+                            Updates in the nation's parks have likewise helped Rwanda gotten one of the cleanest
+                            countries on Earth. In any case, in all honesty, the nation is currently going to the
+                            individuals who attempted to destroy the wildlife. Eco-Age reports that "reformed
+                            poachers currently secure the imperiled mountain gorillas and different warm-blooded
+                            creatures which they used to chase." Other ex-poachers are presently beneficially
+                            utilized as doormen and aides, securely bringing vacationers into the wild to see the
+                            gorillas. <br>
+                            <img src="<?=PROOT?>assets/images/wanda7.jpg" alt="" class="img-fluid art-img"> <br><br>
+                            <h5><b>Green Government policies</b></h5>
+                            Since no sort of nation-wide effort can be supported without a noteworthy difference in
+                            mentality, it has been fundamental for Rwanda to put the climate and environmental
+                            change worries at the core of its turn of events. This has taken care of as of now, as
+                            Rwanda's Ministry of Natural Resources was as of late authorized by the International
+                            Green Climate Fund. The World Economic Forum says this assignment will assist the nation
+                            to draw in an important new account with helping control environmental change, "enough
+                            to empower it to keep up quick monetary development on an asset productive, low-carbon,
+                            and atmosphere versatile way." Countries need to roll out some large improvements to
+                            support the climate too.
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Top ten (10)
+                                African countries to visit after the lockdown.</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            The event of the spread of the coronavirus has led to the imposition of lockdowns in
+                            most countries. This has brought about a halt in travel and tourism. Due to the help of
+                            science and the development of vaccines and medications, the rates of infection and
+                            death caused by the virus are now decreasing and hence bringing about easing of the
+                            restrictions and lockdown. <br>
+                             There is hope that in the not-so-distant future bans on traveling will be lifted and we
+                            would be allowed to visit other countries. <br>
+                            One great continent that attracts most people and is a must-visit spot, is Africa. Not
+                            only because of its safaris but also its vast rich cultural heritage and extremely7
+                            hospitable and welcoming people. <br>
+                            One fun fact is Africa is the second-largest continent on the planet and contains 54
+                            countries, because of that it will be impossible to list all of them. The following are
+                            the top ten countries that you must visit in Africa after the lockdown. <br><br><br>
+                            <dl>
+                                <dt>Morocco</dt>
+                                <dd><img src="<?=PROOT?>assets/images/visit1.jpg" alt="" class="img-fluid art-img">
+                                    <br><br>Morocco is Africa’s center of Arab, Northern Africa, and European
+                                    influences. It is a picturesque country located bordering the Mediterranean and
+                                    the Atlantic Ocean, if you’re a lover of warm weather you would have such a
+                                    great experience here. It harbors some of the best ancient cities, medieval
+                                    castles, and some of the best traditional food restaurant foods you will ever
+                                    come across. Walking down the streets of Marrakesh is such an amazing
+                                    experience, the towns-square is filled with bustling markets, towering mosques,
+                                    and beautiful minarets. The city comes alive at night with all sorts of
+                                    attractions from snake charmers to tattoo artists and street musicians. Visit
+                                    Morocco and you will always have fond memories of it for the rest of your life.
+                                </dd>
+                            </dl>
+                            <dl>
+                                <br><br>
+                                <dt>South Africa</dt>
+                                <dd>
+                                    <img src="<?=PROOT?>assets/images/visit2.jpg" alt="" class="img-fluid art-img">
+                                    <br><br> South Africa is the crème de la crème of tourism in Africa. It homes
+                                    the best safari known to man. When it comes to infrastructure it is one of the
+                                    leading countries on the planet. Infrastructure and accommodation are excellent
+                                    in South Africa; it was even able to host the 2010 world cup tournament. From
+                                    the breath-taking views of Kruger national park, the biggest game reserve to the
+                                    sandy beaches of Cape Town, and the amazing landscape of Johannesburg, South
+                                    Africa has all to offer. Money spent touring South Africa will indeed be money
+                                    well spent. <br><br>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>Namibia</dt>
+                                <dd><img src="<?=PROOT?>assets/images/visit3.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>Known for its sandy dunes and
+                                    extra-ordinary landscape, Namibia is a must-visit country. <br>
+                                    Tourists in Namibia can enjoy horseback riding, breath-taking safari to scenic
+                                    hot-air balloon rides. One amazing thing you can only get touring Namibia is its
+                                    sand surfing coasts. Namibia is among a few countries that have enormous amounts
+                                    of dunes, you can surf or take a ride through these amazing sand hills, popular
+                                    among them is the skeleton sand coast. <br><br><br></dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    Algeria
+                                </dt>
+                                <dd>
+
+                                    If you’re a lover of cool weather, rocky -mountains, and amazing views, Algeria
+                                    is a must-visit country for you. Its capital Algiers is a must-visit.
+                                    <img src="<?=PROOT?>assets/images/visit4.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>
+                                    Algiers is affectionately alluded to as the "Paris of North Africa". In Algiers,
+                                    the visual greatness of Europe perfectly mixes with the quality of the Arab
+                                    world. The city has a thriving economy and obliges a ton of expounds and
+                                    unfamiliar representatives. Also, the city runs a communist framework that
+                                    doesn't pressure class contrasts. The travelers' attractions of Algiers are
+                                    fantastic with delightful sandy seashores and captivating scenes. This makes it
+                                    the ideal place for a peaceful and relaxing vacation. <br><br><br>
+                                </dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    Egypt
+                                </dt>
+                                <dd>
+                                    <img src="<?=PROOT?>assets/images/visit5.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>
+                                    Ancient temples and pyramids will make your visit to Egypt unforgettable.
+                                    Principle attractions are the Sphinx, Great Pyramids of Giza, the Egyptian
+                                    Museum, and the Nile. No excursion to Egypt will be finished without a visit to
+                                    Dahab, a scuba plunging site, and Siwa, an excellent desert garden close to the
+                                    Libyan outskirt. Encountering Modern Cairo is likewise a decent traveler action.
+                                    Here you can see the rich culture of Modern Egypt and purchase trinkets for
+                                    friends and family at home. <br><br><br>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    Tanzania
+                                </dt>
+                                <dd>
+                                     Tanzania consistently takes the best position in numerous travel industry
+                                    related records. Its seashore attractions like Zanzibar and Pemba are among the
+                                    best seashore and diving spots you will ever experience. Serengeti National Park
+                                    is frequently viewed as the best safari objective in Africa since it observes a
+                                    mass wildebeest movement from surrounding parks. <br>
+                                    While Tanzania's scene is unrivaled, a portion of the breath-taking views must
+                                    be reached after long hikes. For example, Mount Kilimanjaro has the highest peak
+                                    in Africa at almost 6000 meters, so climbing its highest point can take a very
+                                    long time, however, it will be worth the view, despite all the trouble.
+                                    <br><br><br>
+
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    Madagascar
+                                </dt>
+                                <dd>
+                                    <img src="<?=PROOT?>assets/images/visit6.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>
+                                    Madagascar is Africa's biggest island and with such great sites to see and
+                                    activities do, it very well may be difficult to pinpoint a simple few. Make a
+                                    point to tour the amazingly delightful, Avenue of the Baobabs, Ranomafana
+                                    National Park, and the flawless Isalo National Park. For a little history, make
+                                    a stop at the UNESCO World Heritage Site of Ambohimanga, a sustained Royal
+                                    settlement that is very near the capital. The Malagasy local people are warm and
+                                    inviting, the coastline is stunning, and to round it up, it's the main spot on
+                                    the planet you can see wild lemurs in their regular territory. <br><br><br>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    The Gambia
+                                </dt>
+                                <dd>
+                                    <img src="<?=PROOT?>assets/images/visit7.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>
+                                    The Gambia is a delightful (and moderately little nation to visit) with regards
+                                    to Africa. Like the greater part of different nations on this list, Gambia has a
+                                    plentiful wildlife populace that is simply too wonderful. On the off chance that
+                                    you visit Kiang West National Park and Bao Bolong Wetland Reserve, you can see
+                                    monkeys, hippos, hyenas, panthers, and a few types of uncommon feathered
+                                    creatures. <br>
+                                    The dynamic capital of Banjul is additionally incredible to visit as well, with
+                                    its captivating National Museum of Gambian history, and the seashores aren't far
+                                    away either; truth be told, rivers and beaches popular in the Gambia.
+                                    <br><br><br>
+
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    Zambia
+                                </dt>
+                                <dd>
+                                    <img src="<?=PROOT?>assets/images/visit8.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>
+                                     A landlocked nation situated in southern Africa, Zambia offers stunning safari
+                                    sites and a trip to the world's most coveted, Victoria Falls. Any outing to
+                                    Zambia wouldn't be finished without encountering the conventional celebrations
+                                    in the nation. Celebrations in Zambia are nearly all year with ceremonials
+                                    loaded with music, dance, and traditional practices. Zambia is likewise an
+                                    extraordinary spot for kayaking where you can have a beautiful perspective on
+                                    elephants, hippos, and other untamed life living by the Zambia waterway.
+                                    <br><br><br>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    Ghana
+                                </dt>
+                                <dd>
+                                    The motherland, the Blackstar of Africa, words cannot be used to describe how
+                                    excellent the country of Ghana is. From the village built on a river in Nzulenzu
+                                    to the game reserve and canopy walkway in kakum to the highest mountain in West
+                                    Africa at Afadza and crocodile reserves of Paga, the places to visit and
+                                    activities to do in Ghana are simply numerous. <br>
+                                    The cities in Ghana never sleeps, there is always someone trying to sell you a
+                                    rare sneaker at a shockingly low cost, food vendors selling hot, steamy street
+                                    food, and children helping their parents around. Ghanaian cuisine is a whole
+                                    other story to write about, just make sure you tell your vendor to lower the
+                                    amount of pepper in your diet( Ghanaians love peppery hot food). <br>
+                                     Get yourself a trusted tour guide and vacation after this lockdown will be an
+                                    unforgettable experience. <br>
+                                    <img src="<?=PROOT?>assets/images/visit9.jpg" alt=""
+                                        class="img-fluid art-img"><br><br>
+
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="art13" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" style="color: #e9640b;">Nigeria’s
+                                Struggle with SARS</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body"
+                            style="text-align: justify; padding: 15px 70px 15px 70px; font-weight: 500;">
+                            Do you know that over 1,100 people have been killed due to police brutality from January
+                            to October 2020? <br><br>
+                            Do you know that the police involved have not faced any trial and no explanation has
+                            been given as to why these people were killed? This is just a few of the gruesome works
+                            of SARS in Nigeria. <br>
+                            <img src="<?=PROOT?>assets/images/sas1.jpg" alt=""
+                                class="img-fluid art-img"><br>Property of cdn.punchng.com<br> <br><br>
+                            It all started in Col. Rindam of the Nigerian Army was killed by police at a checkpoint
+                            in Lagos in 1992. When the information reached the army, soldiers were deployed to
+                            capture any police officer in the city. The Nigerian police officers then fled out of
+                            towns abandoning their posts, checkpoints and security areas, and other points of
+                            interest for criminals. Some even resigned from the police force for fear of their
+                            lives. This occurrence led to a high surge in the rate of crime. Later that year former
+                            Police commissioner Simeon Danladi Midenda formed the SPECIAL ANTI-ROBBERY SQUAD (SARS)
+                            to combat robbery, motor vehicle theft, kidnapping, cattle rustling, and crimes
+                            involving firearms. They were originally fifteen (15) police officers who were operating
+                            in the shadows under the government till they were later officially commissioned in
+                            Lagos after the dispute between the police and the Soldiers were settled. <br><br>
+                            Little did the innocent Nigerians know that this would become the birth of “the licensed
+                            killing squad” <br><br><br>
+                            <h5><b>The beginning of the troubles </b></h5>
+                            In mid-1996, the Lagos branch of SARS captured two safety officers at their work for
+                            being suspected to have helped in a burglary. The two watchmen were not officially
+                            charged with wrongdoing while captured. In January 1997, the groups of the watchmen were
+                            set at a funeral home without clarification for their demises. <br><br>
+                            In 2009, quite a while after the first incident the crew became stronger. Because of the
+                            flood of web-fraudsters and cultism in colleges, SARS agents penetrated Nigerian
+                            colleges, made a few fruitful captures however in the process harmed blameless young
+                            people. As per a publication by Pulse.ng a Nigerian news site, "What SARS became was a
+                            national scourge that witch-hunt machinery against Nigerian youth with dreadlocks,
+                            piercings, cars, expensive phones and risk means of expression”. <br><br>
+                            In May 2010, Amnesty International unveiled that it would be suing the Nigerian Police
+                            over denial of basic freedoms expressing that the Special Anti-Robbery Squad in
+                            Borokiri, Port Harcourt captured three bicycle riders and confined them for more than a
+                            week while being "beaten each night with the knob of a weapon and iron belt."[9] On 20
+                            May 2010, a Federal High Court in Enugu State, requested the then IGP Ogbonna Okechukwu
+                            Onovo to deliver a Special Anti-Robbery Squad official who had gunned down a 15 years of
+                            age kid in secondary school. As per the SARS official, the adolescent was confused with
+                            a kidnapper.[10] On 27 July 2010, a broad publication report was distributed by Sahara
+                            Reporters on how SARS among other police units benefit 9.35 Billion Naira ($60 million)
+                            from detours and coercion within 18 months. <br><br><br>
+                            First Attempt at justice <br><br>
+                            Following several reports on the inhumane treatment of citizens by SARS officials, the
+                            then IGP Solomon Arase announced it would be splitting SARS into two units operational
+                            unit and investigative units to curb the infringements of the force on human rights.
+                            <br>
+                            <img src="<?=PROOT?>assets/images/sas2.jpg" alt=""
+                                class="img-fluid art-img"><br>(Property of https//guardian.ng)<br><br><br>
+
+                            <h5><b>The Second Wave</b></h5>
+                            A September 2016 report published by Amnesty International revealed broad torment and
+                            confinement of people without being tried. The report revealed that SARS had been
+                            coercing people into involuntarily admitting to criminal offenses, starving people, and
+                            several other cases of abuse. <br><br>
+                            On 10 August 2019, while SARS agents were on an attack in Ijegun to capture ruffians in
+                            the region, agents of the unit discharged a few shots in an offer to quell the hijackers
+                            and throughout the activity, a stray bullet hit a pregnant lady, she passed on the spot.
+                            A furious mob was said to have lynched two cops on the spot. <br><br>
+                            On 21 August 2019, four SARS agents were captured and accused of homicide in the wake of
+                            being caught on video mauling and afterward shooting to death two presumed telephone
+                            hoodlums in wide daylight. The two speculated telephone thieves were shot dead after
+                            they had been arrested. <br><br>
+                            On 5 September 2019, agents of the Special Anti-Robbery Squad in Lekki, Lagos supposedly
+                            hijacked, tormented, and burglarized Nigerian rapper Ikechukwu Onunaku. As per reports
+                            by Punch Nigeria, the rapper had to make a few withdrawals at the ATM to pay SARS agents
+                            for sitting idle. <br><br><br>
+                            <h5><b>The beginning of the end</b></h5>
+                            On Saturday 3 October 2020, a video began moving via social media indicating a SARS
+                            police shoot a youthful Nigerian before Wetland Hotel, Ughelli, Delta State. It was
+                            claimed that the SARS police then took away the youngster's vehicle - a Lexus SUV. The
+                            viral video caused public clamor via web-based media, particularly on Twitter, with the
+                            #ENDSARS hashtag trending. <br><br><br>
+                            <h5><b>Enough is enough</b></h5>
+                            <img src="<?=PROOT?>assets/images/sas3.jpg" alt="" class="img-fluid art-img"><br>(Aisha
+                            Yesufu on Twitter)<br><br><br>
+
+                            After the widespread of the gruesome video of the murder of the young man by the SARS
+                            operatives, people took to the streets to protest and call an end to the force. <br><br>
+                            On 11th October 2020, the protestors met the government with five ultimatums. They were
+                            first, the immediate release of all arrested during the protests as well as justice and
+                            compensation for all who died through police brutality in Nigeria. They also demanded
+                            that an independent body be set up within 10 days to investigate and prosecute all
+                            reports of police misconduct. The protestors also asked for psychological evaluation and
+                            retraining of SARS operatives before they are deployed to any other police unit. Lastly,
+                            they asked for adequate remuneration for Nigerian police. <br><br>
+                            In response to the public objection to the police brutality, the Inspector-General of
+                            Nigeria Police restricted the FSARS, Special Tactical Squad (STS), Intelligence Response
+                            Team (IRT), Anti-Cultism Squad, and other strategic units from mounting of barriers,
+                            checkpoints, stop and search and other daily schedule and watches yet they have done
+                            likewise for more than four times in four distinct years making Citizens of Nigeria
+                            question their activities. <br><br><br>
+                            <h5><b>The End?</b></h5>
+                            On Sunday, 11 October 2020, Nigeria's Inspector-General of Police, Mohammed Adamu
+                            declared the "dissolution" of SARS. Numerous Nigerians inside the development
+                            scrutinized the declaration, in any case, bringing up that comparative guarantees had
+                            been made in before years and that the administration arranged to reassign SARS
+                            officials to other police offices instead to dispense them from the power entirely.
+                            <br><br>
+                            The protests proceeded notwithstanding the "disintegration" the same number of do not
+                            believe the announcement. On Tuesday, 13 October 2020, an official statement marked by
+                            Femi Adesina the Presidential representative, shows that the Nigerian Government has
+                            accepted to the five requests of the End SARS protestors. <br><br>
+                            Because of previous occurrences where such announcements were made and later were not
+                            stuck too, people do not believe the cruelty of the infamous SARS is over. If it is
+                            truly over or not, we live to see. <br>
+                            <img src="<?=PROOT?>assets/images/sas4.jpg" alt=""
+                                class="img-fluid art-img"><br><br><br>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
